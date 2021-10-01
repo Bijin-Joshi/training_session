@@ -44,7 +44,7 @@ getUserDetail1()
 
 Promise.all([getUserDetail1(), getUserDetail2()])
 .then ((result) => {
-    console.log("Details of the users from both API", result)
+    console.log("Details of the users from both api", result)
 })
 .catch((error) => {
     console.log("Error fetching the user details", error);
@@ -53,7 +53,7 @@ Promise.all([getUserDetail1(), getUserDetail2()])
 
 Promise.race([getUserDetail1(), getUserDetail2()])
 .then ((result) => {
-    console.log("Results from the first fulfilled API ", result)
+    console.log("Results from the first fulfilled api ", result)
 })
 .catch((error) => {
     console.log("Error fetching the user details", error);
