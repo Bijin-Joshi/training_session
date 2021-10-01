@@ -32,7 +32,7 @@ const getUserDetail2 = () => {
     });
 };
 
-//Normal Promise
+
 getUserDetail1()
 .then ((result) => {
     console.log("Details of the user", result)
@@ -41,7 +41,7 @@ getUserDetail1()
     console.log("Error fetching the user details", error);
 });
 
-//Promise.all
+
 Promise.all([getUserDetail1(), getUserDetail2()])
 .then ((result) => {
     console.log("Details of the users from both API", result)
@@ -50,7 +50,7 @@ Promise.all([getUserDetail1(), getUserDetail2()])
     console.log("Error fetching the user details", error);
 });
 
-//Promise.race
+
 Promise.race([getUserDetail1(), getUserDetail2()])
 .then ((result) => {
     console.log("Results from the first fulfilled API ", result)
@@ -60,11 +60,7 @@ Promise.race([getUserDetail1(), getUserDetail2()])
 });
 
 
-// let userDetail = () => new Promise((resolve, reject) => {
-//     for (let detail of getUserDetail1) {
-//         console.log(detail);
-//     }
-// })
+
 getUserDetail2()
     .then((result) => {
         const {data} = result;
